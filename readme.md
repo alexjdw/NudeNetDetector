@@ -2,15 +2,16 @@
 A deployable version of the NudeNet detector at https://github.com/bedapudi6788/NudeNet. (NSFW!!)
 
 Runs as scalable docker container that uses the detector option of the classifier. The 
-detector provides a rectangle for each detected piece of nudity, which can help with
+detector provides a rectangle, score, and label for each detected piece of nudity, which can help with
 UI highlighting and/or censoring scripts.
   
 ### Usage
 * Download the repository.
-* docker build .
+* `docker build .`
 * Copy the container ID.
-* docker run -p 5000:80 <paste container ID>
-
+* `docker run -p 5000:80 <paste container ID>`
+* Make a post request to `localhost:5000/detect`
+  
 ### Recommended deployment
 
 This is designed to be deployed to a single-processor cloud-based machine.
