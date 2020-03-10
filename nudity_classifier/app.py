@@ -9,7 +9,6 @@ from flask import Flask, jsonify, request
 
 import logging
 from nudenet import NudeDetector
-from tensorflow_core import float32
 
 app = Flask(__name__)
 detector = NudeDetector()
